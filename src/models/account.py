@@ -1,4 +1,3 @@
-from repositories.account_repository import AccountRepository
 from models.privileges import Privilege
 
 class Account:
@@ -9,6 +8,7 @@ class Account:
             pin_number: int,
             privilege: Privilege
     ):
+        from repositories.account_repository import AccountRepository
         self.account_number = AccountRepository.generate_account_number()
         self.name = name
         self.balance = balance
