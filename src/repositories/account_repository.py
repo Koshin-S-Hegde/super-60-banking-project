@@ -1,9 +1,10 @@
-# AccountRepository.py
+from models.account import Account
+
    
 class AccountRepository:
     # Class attribute to store all the elements
-    accounts = []
-    account_counter = 1000
+    accounts: list[Account] = []
+    account_counter: int = 1000
 
     # Method to generate a new account number
     @classmethod
@@ -13,7 +14,7 @@ class AccountRepository:
 
     # Method to save Account
     @classmethod
-    def save_account(cls, account):
+    def save_account(cls, account: Account):
         cls.accounts.append(account)
 
     # Method to get all accounts

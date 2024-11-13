@@ -1,12 +1,13 @@
 from models.privileges import Privilege
 
+
 class AccountPrivilegesManager:
     privileges = {
-        'PREMIUM': 100000,
-        'GOLD': 50000,
-        'SILVER': 25000
+        Privilege.PREMIUM: 100000,
+        Privilege.GOLD: 50000,
+        Privilege.SILVER: 25000
     }
 
     @classmethod
-    def get_transfer_limit(cls, privilege):
+    def get_transfer_limit(cls, privilege: Privilege):
         return cls.privileges.get(privilege, 0)

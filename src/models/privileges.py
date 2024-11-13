@@ -1,8 +1,6 @@
-#Privileges.py
+from enum import StrEnum
 
-from enum import Enum
-
-class Privilege(Enum):
+class Privilege(StrEnum):
     PREMIUM = "PREMIUM"
-    GOLD = "GOLD"
-    SILVER = "SILVER"
+    GOLD    = "GOLD"
+    SILVER  = "SILVER"
